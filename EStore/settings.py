@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'categories',
     'accounts',
-    'storeapp'
+    'storeapp',
+    'Cart'
 ]
 
 MIDDLEWARE = [
@@ -65,6 +66,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'categories.context_processors.menu_links',
+                'Cart.context_processor.counter',
                 # by defining it here now this menu links can be called on any page.
             ],
         },
