@@ -25,11 +25,10 @@ class MyAccountManager(BaseUserManager):
             username = username,
             password=password,
             first_name = first_name,
-            last_name = last_name
+            last_name = last_name,
         )
-
-        user.is_admin = True
         user.is_active = True
+        user.is_admin = True
         user.is_staff = True
         user.is_superadmin = True
         user.save(using= self._db)
