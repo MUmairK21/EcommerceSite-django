@@ -1,0 +1,50 @@
+/* Hide radio buttons */
+.rate > input {
+  display: none;
+}
+
+.rate {
+  display: inline-block;
+  border: 0;
+}
+
+.rate label {
+  float: right;
+  position: relative;
+}
+
+/* Full Star */
+.rate > label:before {
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f005";
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0.3rem 0.2rem;
+  cursor: pointer;
+}
+
+/* Half Star */
+.rate .half:before {
+  content: "\f5c0";
+  position: absolute;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding-right: 0;
+}
+
+input:checked ~ label,
+label:hover ~ label {
+  color: #ffb503;
+}
+
+input:checked + label:hover,
+input:checked ~ label:hover,
+input:checked ~ label:hover ~ label,
+label:hover ~ input:checked ~ label {
+  color: #cc9000;
+}
+.rating_star i {
+  color: #ffb503 !important;
+}

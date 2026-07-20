@@ -10,6 +10,5 @@ urlpatterns = [
     path('category/<slug:category_slug>/',views.Store,name="product-by-category"),
     path('cateory/<slug:category_slug>/<slug:product_slug>',views.product_details,name="product_Details"),
     path('search/',views.search, name='search'),
+    path('submit_review/<int:product_id>', views.submit_review,name='submit_review')
 ]
-# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-# Configuring Media files URL
